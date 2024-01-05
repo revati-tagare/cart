@@ -4,15 +4,26 @@ class CartItem extends React.Component {
   constructor() {
     super();
     this.state = {
-      price: 999,
-      title: "Phone",
+      price: 9999,
+      title: "Mobile Phone",
       qty: 1,
       img: "",
     };
     //this.increaseQuantity=this.increaseQuantity.bind(this);
   }
   increaseQuantity = () => {
-    console.log("this", this.state);
+    //this.state.qty += 1;
+    // console.log("this", this.state);
+    //setState form 1
+    /* this.setState({
+      qty: this.state.qty + 1,
+    });*/
+    //setState form2
+    this.setState((prevState) => {
+      return {
+        qty:prevState.qty + 1,
+      };
+    });
   };
   render() {
     const { price, title, qty } = this.state;

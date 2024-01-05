@@ -5,7 +5,6 @@ function App() {
     <div className="App">
       <h1>Cart</h1>
       <CartItem />
-      Hello World!
     </div>
   );
 }
